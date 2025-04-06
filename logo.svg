@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- FOSSOSANDROID Logo -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DDC84" />
+      <stop offset="100%" stop-color="#4285F4" />
+    </linearGradient>
+  </defs>
+  <!-- Android robot shape -->
+  <path fill="#3DDC84" d="M145,70 C145,62 139,55 130,55 L70,55 C61,55 55,62 55,70 L55,130 C55,139 61,145 70,145 L130,145 C139,145 145,139 145,130 L145,70 Z" />
+  <!-- Eyes -->
+  <circle fill="#263238" cx="80" cy="85" r="7" />
+  <circle fill="#263238" cx="120" cy="85" r="7" />
+  <!-- Antenna -->
+  <line x1="100" y1="55" x2="100" y2="35" stroke="#263238" stroke-width="3" stroke-linecap="round" />
+  <circle fill="#263238" cx="100" cy="32" r="5" />
+  <!-- Open Source Symbol -->
+  <circle fill="none" stroke="#FFFFFF" stroke-width="4" cx="100" cy="110" r="20" />
+  <path fill="#FFFFFF" d="M100,90 L100,110 L115,118" stroke-linecap="round" />
+</svg>

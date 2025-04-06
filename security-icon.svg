@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <linearGradient id="securityGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DDC84" />
+      <stop offset="100%" stop-color="#4285F4" />
+    </linearGradient>
+  </defs>
+  <circle fill="#E8F5E9" cx="60" cy="60" r="50" />
+  <!-- Shield shape -->
+  <path fill="url(#securityGradient)" d="M60,30 L85,40 C85,65 75,85 60,95 C45,85 35,65 35,40 L60,30 Z" />
+  <!-- Check mark -->
+  <path fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" d="M50,60 L58,68 L70,52" />
+</svg>

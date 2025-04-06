@@ -1,0 +1,542 @@
+/* 
+ * FOSSOSANDROID - Main Stylesheet
+ * A clean, professional style for an open source Android development team
+ */
+
+/* ========== Base Styles ========== */
+:root {
+    /* Colors inspired by Android and open source themes */
+    --primary-color: #3ddc84; /* Android green */
+    --secondary-color: #4285f4; /* Google blue */
+    --dark-color: #263238; /* Dark blue-grey */
+    --light-color: #f5f5f5; /* Light grey */
+    --white: #ffffff;
+    --text-color: #333333;
+    --text-light: #666666;
+    --success-color: #00c853;
+    --accent-color: #ff5722; /* Android accent */
+    
+    /* Typography */
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    
+    /* Container width */
+    --container-width: 85%;
+    --container-max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--white);
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-color);
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: var(--container-width);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-family: var(--heading-font);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+}
+
+.btn-primary:hover {
+    background-color: #33b472;
+    color: var(--dark-color);
+}
+
+/* ========== Header Styles ========== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: var(--spacing-sm) 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: var(--spacing-sm);
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: var(--spacing-md);
+}
+
+.main-nav ul li a {
+    color: var(--dark-color);
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-color);
+    margin: 2px 0;
+    transition: all 0.3s ease;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+    padding: calc(var(--spacing-xl) * 2) 0 var(--spacing-xl);
+    background: linear-gradient(135deg, var(--white) 0%, #e8f5e9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/hero-bg.svg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    opacity: 0.1;
+    top: 0;
+    right: 0;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 10;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.hero h3 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-light);
+}
+
+/* ========== About Section ========== */
+.about {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--white);
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+}
+
+.about-text {
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+}
+
+/* ========== Services Section ========== */
+.services {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.service-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    margin-bottom: var(--spacing-sm);
+}
+
+.service-icon img {
+    height: 60px;
+    width: auto;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-color);
+}
+
+.service-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* ========== Why Choose Us Section ========== */
+.why-choose {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--white);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.feature {
+    padding: var(--spacing-md);
+    border-left: 3px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    background-color: rgba(61, 220, 132, 0.05);
+}
+
+.feature h3 {
+    font-size: 1.3rem;
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature p {
+    color: var(--text-light);
+}
+
+/* ========== Coming Soon Section ========== */
+.coming-soon {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--dark-color);
+    margin-top: var(--spacing-md);
+    border-top: 5px solid var(--primary-color);
+}
+
+.coming-soon-content {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.coming-soon-title {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.coming-soon-text {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--white);
+    margin-bottom: 0;
+    padding: 0 var(--spacing-md);
+    font-weight: 500;
+}
+
+/* ========== Contact Section ========== */
+.contact {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-color);
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--spacing-md);
+}
+
+.contact-item {
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.contact-item .label {
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-right: var(--spacing-xs);
+}
+
+.contact-item .value {
+    color: var(--secondary-color);
+}
+
+/* ========== Footer ========== */
+.footer {
+    padding: var(--spacing-lg) 0 var(--spacing-md);
+    background-color: var(--dark-color);
+    color: var(--white);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-small {
+    height: 30px;
+    margin-right: var(--spacing-xs);
+}
+
+.footer-company-name {
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer-text p {
+    color: var(--light-color);
+    font-size: 0.9rem;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: var(--spacing-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+/* ========== Responsive Styles ========== */
+@media screen and (max-width: 992px) {
+    :root {
+        --container-width: 90%;
+    }
+    
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-nav {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero h3 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        margin-bottom: var(--spacing-sm);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    :root {
+        --container-width: 95%;
+    }
+    
+    .hero {
+        padding-top: calc(var(--spacing-xl) * 1.5);
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h3 {
+        font-size: 1.3rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-text p,
+    .contact-info p {
+        font-size: 1rem;
+    }
+    
+    .contact-item {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DDC84" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#4285F4" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+  <!-- Android shapes background pattern -->
+  <rect fill="url(#heroGradient)" width="800" height="600" />
+  
+  <!-- Abstract Android shapes -->
+  <circle fill="#3DDC84" opacity="0.1" cx="650" cy="150" r="100" />
+  <circle fill="#4285F4" opacity="0.1" cx="550" cy="300" r="80" />
+  <circle fill="#3DDC84" opacity="0.1" cx="700" cy="400" r="120" />
+  
+  <!-- Code pattern -->
+  <g opacity="0.05" fill="#263238">
+    <rect x="100" y="100" width="200" height="10" rx="2" />
+    <rect x="100" y="120" width="150" height="10" rx="2" />
+    <rect x="100" y="140" width="180" height="10" rx="2" />
+    <rect x="100" y="160" width="120" height="10" rx="2" />
+    <rect x="100" y="180" width="160" height="10" rx="2" />
+    
+    <rect x="400" y="300" width="200" height="10" rx="2" />
+    <rect x="400" y="320" width="150" height="10" rx="2" />
+    <rect x="400" y="340" width="180" height="10" rx="2" />
+    <rect x="400" y="360" width="120" height="10" rx="2" />
+    <rect x="400" y="380" width="160" height="10" rx="2" />
+  </g>
+</svg>
